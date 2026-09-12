@@ -83,7 +83,7 @@ if (galleryModal) {
     const img = card.querySelector('.gallery-img');
     if (!img) return;
     currentIndex = index;
-    modalImg.src = img.src;
+    modalImg.src = img.dataset.full;
     modalImg.alt = img.alt;
   }
 

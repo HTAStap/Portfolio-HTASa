@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTASta</title>
+<meta name="description" content="Портфолио художника: иллюстрация, концепт-арт.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<svg style="display: none;">
+  <symbol id="arrow" viewBox="0 0 24 24">
+  <path d="M4 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+</head>
+<body>
+<header class="site-header">
+  <nav class="menu" aria-label="Основная навигация">
+
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="menu-items">
+      <a href="#illustrations" class="menu-item" style="--menu-top:35px; --menu-left:190px;">
+        <span>Проэкты</span>
+      </a>
+      <a href="gallery.html" class="menu-item" style="--menu-top:100px; --menu-left:160px;">
+        <span>Галерея</span>
+      </a>
+      <a href="#illustrations" class="menu-item" style="--menu-top:150px; --menu-left:70px;">
+        <span>3Д</span>
+      </a>
+    </div>
+
+  </nav>
+</header>
+
+<main class="page-grid">
+  <section class="about_me">
+    <h1 class="wiggle-title">Обо мне</h1>
+    <h2>2D-художник</h2>
+    <p>Рисую более шести лет, есть незаконченная художественная школа. Могу работать как в 2D графике, так и в 3D. Готова активно обучаться новому. Участвую в зинах (фанатское малотиражное издание с иллюстрациями по определённой тематике).</p>
+  </section>
+
+  <!-- <section class="project-images" id="projects">
+    <h1 class="section-title wiggle-title">Проекты</h1>
+    <div class="project-selector-wrap">
+      <div class="project-selector">
+        <a href="gallery.html?filter=illustration&open=illustration_1" class="illustration-card" aria-label="Открыть работу «Аманда» в галерее">
+          <span class="photo-label">Фото</span>
+          <img class="illustration-img" src="assets/illustration_1.webp" alt="Иллюстрация 1" onerror="this.style.display='none'">
+        </a>
+        <div class="illustration-card">
+          <span class="photo-label">Фото</span>
+          <img class="illustration-img" src="assets/illustration_2.webp" alt="Проект 2" onerror="this.style.display='none'">
+        </div>
+        <div class="illustration-card">
+          <span class="photo-label">Фото</span>
+          <img class="illustration-img" src="assets/illustration_3.webp" alt="Проект 3" onerror="this.style.display='none'">
+        </div>
+        <div class="illustration-card">
+          <span class="photo-label">Фото</span>
+          <img class="illustration-img" src="assets/illustration_1.webp" alt="Проект 1" onerror="this.style.display='none'">
+        </div>
+        <div class="illustration-card">
+          <span class="photo-label">Фото</span>
+          <img class="illustration-img" src="assets/illustration_2.webp" alt="Проект 2" onerror="this.style.display='none'">
+        </div>
+      </div>
+      <button class="selector-arrow" aria-label="Пролистать проекты">
+      <svg class="arrow-icon"><use href="#arrow"></use></svg>
+      </button>
+    </div>
+  </section> -->
+
+  <section class="image-section" id="illustrations">
+    <h1 class="section-title wiggle-title">Иллюстрации</h1>
+    <div class="illustration-gallery">
+      <div class="gallery-row row-1">
+        <a href="gallery.html?filter=illustration&open=illustration_1" class="illustration-card" aria-label="Открыть работу «Аманда» в галерее">
+          <span class="photo-label">Фото</span>
+          <img class="illustration-img" src="assets/illustration_1.webp" alt="Иллюстрация 1" onerror="this.style.display='none'">
+        </a>
+        <a href="gallery.html?filter=illustration&open=illustration_2" class="illustration-card">
+          <span class="photo-label">Фото</span>
+          <img class="illustration-img" src="assets/illustration_2.webp" alt="Иллюстрация 1" onerror="this.style.display='none'">
+        </a>
+      </div>
+
+      <div class="gallery-row row-2">
+        <a href="gallery.html?filter=illustration&open=illustration_3" class="illustration-card">
+          <span class="photo-label">Фото</span>
+          <img class="illustration-img" src="assets/illustration_3.webp" alt="Иллюстрация 1" onerror="this.style.display='none'">
+        </a>
+        <a href="gallery.html?filter=illustration&open=illustration_4" class="illustration-card">
+          <span class="photo-label">Фото</span>
+          <img class="illustration-img" src="assets/illustration_4.webp" alt="Иллюстрация 1" onerror="this.style.display='none'">
+        </a>
+      </div>
+
+      <div class="gallery-row row-3">
+        <a href="gallery.html?filter=illustration&open=illustration_5" class="illustration-card">
+          <span class="photo-label">Фото</span>
+          <img class="illustration-img" src="assets/illustration_5.webp" alt="Иллюстрация 1" onerror="this.style.display='none'">
+        </a>
+        <a href="gallery.html?filter=illustration" class="illustration-card card-link" aria-label="Перейти в галерею иллюстраций">
+          <span class="card-link-text">В галерею</span>
+          <svg class="card-link-arrow arrow-icon" aria-hidden="true"><use href="#arrow"></use></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="image-section" id="concept">
+    <h1 class="section-title wiggle-title">Концепт-арт</h1>
+    <div class="illustration-gallery concept-gallery">
+        <div class="gallery-row concept-row-mosaic">
+          <a href="gallery.html?filter=concept&open=concept_01" class="illustration-card">
+            <span class="photo-label">Фото</span>
+            <img class="illustration-img" src="assets/concept_01.webp" alt="Концепт 1" onerror="this.style.display='none'">
+          </a>
+          <a href="gallery.html?filter=concept&open=concept_02" class="illustration-card">
+            <span class="photo-label">Фото</span>
+            <img class="illustration-img" src="assets/concept_02.webp" alt="Концепт 2" onerror="this.style.display='none'">
+          </a>
+          <a href="gallery.html?filter=concept&open=concept_03" class="illustration-card">
+            <span class="photo-label">Фото</span>
+            <img class="illustration-img" src="assets/concept_03.webp" alt="Концепт 3" onerror="this.style.display='none'">
+          </a>
+        </div>
+        <div class="gallery-row concept-row-banner">
+          <a href="gallery.html?filter=concept&open=concept_04" class="illustration-card">
+            <span class="photo-label">Фото</span>
+            <img class="illustration-img" src="assets/concept_04.webp" alt="Концепт 4" onerror="this.style.display='none'">
+          </a>
+          <a href="gallery.html?filter=concept&open=concept_05" class="illustration-card">
+            <span class="photo-label">Фото</span>
+            <img class="illustration-img" src="assets/concept_05.webp" alt="Концепт 4" onerror="this.style.display='none'">
+          </a>
+          <a href="gallery.html?filter=concept" class="illustration-card card-link" aria-label="Перейти в галерею концепт-арта">
+            <span class="card-link-text">В галерею</span>
+            <svg class="card-link-arrow arrow-icon" aria-hidden="true"><use href="#arrow"></use></svg>
+          </a>
+        </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

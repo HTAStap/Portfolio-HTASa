@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Галерея — HTASta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<svg style="display: none;">
+  <symbol id="arrow" viewBox="0 0 24 24">
+  <path d="M4 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+</head>
+<body>
+<header class="site-header">
+  <nav class="menu" aria-label="Основная навигация">
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="menu-items">
+      <a href="index.html" class="menu-item" style="--menu-top:100px; --menu-left:160px;">
+        <span>Главная</span>
+      </a>
+      <a href="index.html#projects" class="menu-item" style="--menu-top:35px; --menu-left:190px;">
+        <span>Проэкты</span>
+      </a>
+      <a href="#" class="menu-item" style="--menu-top:150px; --menu-left:70px;">
+        <span>3Д</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main class="page-grid">
+  <section class="gallery-page" id="gallery">
+    <h1 class="section-title wiggle-title">Галерея</h1>
+    <div class="gallery-filters">
+      <button class="filter-btn" data-filter="all">Все</button>
+      <button class="filter-btn" data-filter="illustration">Иллюстрация</button>
+      <button class="filter-btn" data-filter="concept">Концепт</button>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-card" data-category="illustration" data-id="illustration_1">
+        <img class="gallery-img" src="assets/illustration_1.webp" alt="Аманда" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="illustration" data-id="illustration_2">
+        <img class="gallery-img" src="assets/illustration_2.webp" alt="Сэм" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="illustration" data-id="illustration_3">
+        <img class="gallery-img" src="assets/illustration_3.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="illustration" data-id="illustration_4">
+        <img class="gallery-img" src="assets/illustration_4.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="illustration" data-id="illustration_5">
+        <img class="gallery-img" src="assets/illustration_5.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="illustration" data-id="illustration_6">
+        <img class="gallery-img" src="assets/illustration_6.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="illustration" data-id="illustration_7">
+        <img class="gallery-img" src="assets/illustration_7.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_01">
+        <img class="gallery-img" src="assets/concept_01.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_02">
+        <img class="gallery-img" src="assets/concept_02.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_03">
+        <img class="gallery-img" src="assets/concept_03.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_04">
+        <img class="gallery-img" src="assets/concept_04.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_05">
+        <img class="gallery-img" src="assets/concept_05.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_06">
+        <img class="gallery-img" src="assets/concept_06.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_07">
+        <img class="gallery-img" src="assets/concept_07.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_08">
+        <img class="gallery-img" src="assets/concept_08.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_09">
+        <img class="gallery-img" src="assets/concept_09.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_10">
+        <img class="gallery-img" src="assets/concept_10.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_11">
+        <img class="gallery-img" src="assets/concept_11.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_12">
+        <img class="gallery-img" src="assets/concept_12.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_13">
+        <img class="gallery-img" src="assets/concept_13.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_14">
+        <img class="gallery-img" src="assets/concept_14.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_15">
+        <img class="gallery-img" src="assets/concept_15.webp" alt="" onerror="this.style.display='none'">
+      </div>
+      <div class="gallery-card" data-category="concept" data-id="concept_16">
+        <img class="gallery-img" src="assets/concept_16.webp" alt="" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="gallery-modal" id="galleryModal" aria-hidden="true">
+  <div class="gallery-modal-overlay"></div>
+  <button class="gallery-modal-nav gallery-modal-prev" aria-label="Предыдущая работа">
+    <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="gallery-modal-content">
+    <button class="gallery-modal-close" aria-label="Закрыть">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+    </button>
+    <img class="gallery-modal-img" src="" alt="">
+  </div>
+  <button class="gallery-modal-nav gallery-modal-next" aria-label="Следующая работа">
+    <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+
+<footer class="site-footer"></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

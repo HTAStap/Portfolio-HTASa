@@ -24,39 +24,45 @@ document.querySelectorAll('.wiggle-title').forEach((title) => {
   });
 });
 
+// --- Прокрутка колесом и наведением на стрелку (переиспользуемо) ---
+function enableWheelScroll(container) {
+  if (!container) return;
+  container.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      container.scrollLeft += e.deltaY * 3;
+    }
+  }, { passive: false });
+}
+
+function enableHoverScroll(container, arrow, step) {
+  if (!container || !arrow) return;
+  let scrolling = false;
+
+  const scrollStep = () => {
+    if (!scrolling) return;
+    container.scrollLeft += step;
+    requestAnimationFrame(scrollStep);
+  };
+
+  arrow.addEventListener('mouseenter', () => {
+    arrow.classList.add('scrolling');
+    scrolling = true;
+    requestAnimationFrame(scrollStep);
+  });
+
+  arrow.addEventListener('mouseleave', () => {
+    arrow.classList.remove('scrolling');
+    scrolling = false;
+  });
+}
+
 // --- Горизонтальный селектор проектов ---
 const projectSelector = document.querySelector('.project-selector');
 const selectorArrow = document.querySelector('.selector-arrow');
 
-if (projectSelector) {
-  projectSelector.addEventListener('wheel', (e) => {
-    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-      e.preventDefault();
-      projectSelector.scrollLeft += e.deltaY * 3;
-    }
-  }, { passive: false });
-
-  if (selectorArrow) {
-    let scrolling = false;
-
-    const scrollStep = () => {
-      if (!scrolling) return;
-      projectSelector.scrollLeft += 15;
-      requestAnimationFrame(scrollStep);
-    };
-
-    selectorArrow.addEventListener('mouseenter', () => {
-      selectorArrow.classList.add('scrolling');
-      scrolling = true;
-      requestAnimationFrame(scrollStep);
-    });
-
-    selectorArrow.addEventListener('mouseleave', () => {
-      selectorArrow.classList.remove('scrolling');
-      scrolling = false;
-    });
-  }
-}
+enableWheelScroll(projectSelector);
+enableHoverScroll(projectSelector, selectorArrow, 15);
 
 // --- Модалка галереи ---
 const galleryParams = new URLSearchParams(window.location.search);
@@ -197,31 +203,6 @@ if (viewerImg && viewerThumbsWrap) {
   const initialThumb = viewerThumbsWrap.querySelector('.project-thumb.active') || thumbs[0];
   if (initialThumb) showThumb(initialThumb);
 
-  viewerThumbsWrap.addEventListener('wheel', (e) => {
-    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-      e.preventDefault();
-      viewerThumbsWrap.scrollLeft += e.deltaY * 3;
-    }
-  }, { passive: false });
-
-  if (viewerArrow) {
-    let scrolling = false;
-
-    const scrollStep = () => {
-      if (!scrolling) return;
-      viewerThumbsWrap.scrollLeft += 12;
-      requestAnimationFrame(scrollStep);
-    };
-
-    viewerArrow.addEventListener('mouseenter', () => {
-      viewerArrow.classList.add('scrolling');
-      scrolling = true;
-      requestAnimationFrame(scrollStep);
-    });
-
-    viewerArrow.addEventListener('mouseleave', () => {
-      viewerArrow.classList.remove('scrolling');
-      scrolling = false;
-    });
-  }
+  enableWheelScroll(viewerThumbsWrap);
+  enableHoverScroll(viewerThumbsWrap, viewerArrow, 12);
 }
